@@ -6,7 +6,7 @@
 /*   By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:47:39 by jcaetano          #+#    #+#             */
-/*   Updated: 2021/10/28 12:32:47 by jcaetano         ###   ########.fr       */
+/*   Updated: 2021/10/28 13:09:49 by jcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_putptr(unsigned long int nbr, int first)
 
 	size = 0;
 	if (!nbr)
-		size += (write(1, "(nil)", 5));
+		size += (write(1, "0x0", 3));
 	else
 	{
 		if (first)
