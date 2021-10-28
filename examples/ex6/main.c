@@ -6,7 +6,7 @@
 /*   By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 09:51:56 by jcaetano          #+#    #+#             */
-/*   Updated: 2021/10/21 11:10:10 by jcaetano         ###   ########.fr       */
+/*   Updated: 2021/10/27 10:04:08 by jcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	hex_digit(int v)
 		return ('a' + v - 10);
 }
 
-void	print_address_hex(void* p0)
+void	print_address_hex(void *p0)
 {
 	int			i;
 	uintptr_t	p;
@@ -51,5 +51,5 @@ int	main(void)
 
 	p = 50;
 	print_address_hex(&p);
-	printf("%p\n", &p);
+	printf("printf: %p\n", &p);
 }

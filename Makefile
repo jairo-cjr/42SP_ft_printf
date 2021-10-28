@@ -6,7 +6,7 @@
 #    By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 11:33:07 by jcaetano          #+#    #+#              #
-#    Updated: 2021/10/26 16:48:21 by jcaetano         ###   ########.fr        #
+#    Updated: 2021/10/28 11:41:55 by jcaetano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJECTS			=	$(SRCS:.c=.o)
 
 
 CC				=	clang
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra -Werror -g
 AR				=	ar -rcs
 RM				=	rm -rf
 

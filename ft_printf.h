@@ -6,7 +6,7 @@
 /*   By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:30:31 by jcaetano          #+#    #+#             */
-/*   Updated: 2021/10/26 16:21:12 by jcaetano         ###   ########.fr       */
+/*   Updated: 2021/10/27 17:43:41 by jcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@
 # include <unistd.h>
 # include "./libft/libft.h"
 
-// # define HEXA_UP	"0123456789ABCDEF"
-// # define HEXA_UP	"0123456789abcdef"
+# define HEXA_UP	"0123456789ABCDEF"
+# define HEXA_LOW	"0123456789abcdef"
 # define UINT_MAX 4294967295
-# define FORMATS	"cspdiuxX%"
 
 int				ft_printf(const char *str, ...);
 
@@ -31,7 +30,7 @@ int				ft_printf(const char *str, ...);
  * @param c The character to output.
  * @return The number of characters output.
  */
-int				ft_putchar(char c);
+unsigned int	ft_putchar(char c);
 
 /**
  * @brief Outputs the string ’s’.
@@ -64,5 +63,16 @@ int				ft_putnbr(int n);
  * @return The number os characters writen.
  */
 int				ft_unsigned(unsigned int n);
+
+/**
+ * @brief Outputs the decimal number as hexadecimal.
+ *
+ * @param n The number to be output.
+ * @param is_low Verify if output as lowercase or uppercase.
+ * @return Number of chars writen.
+ */
+int				ft_hex_digit(unsigned int n, int is_low);
+
+int				ft_putptr(unsigned long int n, int first);
 
 #endif
