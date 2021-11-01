@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:30:31 by jcaetano          #+#    #+#             */
-/*   Updated: 2021/10/27 17:43:41 by jcaetano         ###   ########.fr       */
+/*   Updated: 2021/11/01 14:32:33 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
 # include <stdarg.h>
 # include <unistd.h>
 # include "./libft/libft.h"
@@ -21,6 +20,12 @@
 # define HEXA_UP	"0123456789ABCDEF"
 # define HEXA_LOW	"0123456789abcdef"
 # define UINT_MAX 4294967295
+
+# if __APPLE__
+#  define MAC 1
+# else
+#  define MAC 0
+# endif
 
 int				ft_printf(const char *str, ...);
 
@@ -73,6 +78,12 @@ int				ft_unsigned(unsigned int n);
  */
 int				ft_hex_digit(unsigned int n, int is_low);
 
-int				ft_putptr(unsigned long int n, int first);
+/**
+ * @brief Outputs the pointer addres of the param.
+
+ * @param ptr The param to print the addres.
+ * @return Number of chars writen.
+ */
+int				ft_get_ptr(void *ptr);
 
 #endif
